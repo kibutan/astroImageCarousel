@@ -1,0 +1,59 @@
+---
+import { Image } from "astro:assets";
+import src1 from "../images/1.png";
+import src2 from "../images/2.png";
+import src3 from "../images/3.png";
+import src4 from "../images/4.png";
+import src5 from "../images/5.png";
+import src6 from "../images/6.png";
+import src7 from "../images/7.png";
+---
+<div class="carousel-container">
+  <div>
+    <Image class="carousel-image" src={src1} alt = ""/ width={800} height={400} style="animation-delay: 0s">
+  </div>
+  <div>
+    <Image class="carousel-image" src={src2} alt = ""/ width={800} height={400} style="animation-delay: 5s">
+  </div>
+  <div>
+    <Image class="carousel-image" src={src3} alt = ""/ width={800} height={400} style="animation-delay: 10s">
+  </div>
+  <div>
+    <Image class="carousel-image" src={src4} alt = ""/ width={800} height={400} style="animation-delay: 15s">
+  </div>
+  <div>
+    <Image class="carousel-image" src={src5} alt = ""/ width={800} height={400} style="animation-delay: 20s">
+  </div>
+  <div>
+    <Image class="carousel-image" src={src6} alt = ""/ width={800} height={400} style="animation-delay: 25s">
+  </div>
+  <div>
+    <Image class="carousel-image" src={src7} alt = ""/ width={800} height={400} style="animation-delay: 30s">
+  </div>
+</div>
+
+<style>
+  .carousel-container{
+    position:relative;
+    width:800px;
+    height:400px;
+    overflow:hidden;
+  }
+  .carousel-image{
+    position:absolute;
+    top:0;
+    left:0;
+    opacity:0;
+    animation:image-switch-animation 35s infinite;
+  }
+@keyframes image-switch-animation {
+  0%, 14.3%, 100% { opacity: 0; }
+  5%, 9.3% { opacity: 1; } // 1枚目
+  20%, 24.3% { opacity: 1; } // 2枚目
+  35%, 39.3% { opacity: 1; } // 3枚目
+  50%, 54.3% { opacity: 1; } // 4枚目
+  65%, 69.3% { opacity: 1; } // 5枚目
+  80%, 84.3% { opacity: 1; } // 6枚目
+  95%, 99.3% { opacity: 1; } // 7枚目
+}
+</style>
