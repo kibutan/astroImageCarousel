@@ -7,9 +7,17 @@ import src4 from "../images/4.png";
 import src5 from "../images/5.png";
 import src6 from "../images/6.png";
 import src7 from "../images/7.png";
+import qr from '../images/fiximage.png';
 ---
 <div class="carousel-container">
   <div>
+    <div class="text-qr-container">
+      <div class="text-container">
+        <span class="text">HOGE1</span>
+        <span class="text">HOGE2</span>
+      </div>
+      <Image class="qr-image" src={qr}  alt=""/>
+    </div>
     <Image class="carousel-image" src={src1} alt = ""/ width={800} height={400} style="animation-delay: 0s">
   </div>
   <div>
@@ -33,6 +41,23 @@ import src7 from "../images/7.png";
 </div>
 
 <style>
+  .text-qr-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .text-container{
+    margin: 5%;
+    display: flex;
+    flex-direction:column;
+  }
+  .text{
+    color: white;
+    mix-blend-mode: difference;
+  }
+  .qr-image{
+    margin: 5%;
+  }
   .carousel-container{
     position:relative;
     width:800px;
@@ -44,6 +69,7 @@ import src7 from "../images/7.png";
     top:0;
     left:0;
     opacity:0;
+    z-index: -1;
     animation:image-switch-animation 35s infinite;
   }
 @keyframes image-switch-animation {
