@@ -47,13 +47,22 @@ import src7 from "../images/7.png";
     animation:image-switch-animation 35s infinite;
   }
 @keyframes image-switch-animation {
-  0%, 14.3%, 100% { opacity: 0; }
-  5%, 9.3% { opacity: 1; } // 1枚目
-  20%, 24.3% { opacity: 1; } // 2枚目
-  35%, 39.3% { opacity: 1; } // 3枚目
-  50%, 54.3% { opacity: 1; } // 4枚目
-  65%, 69.3% { opacity: 1; } // 5枚目
-  80%, 84.3% { opacity: 1; } // 6枚目
-  95%, 99.3% { opacity: 1; } // 7枚目
+  0%{
+    opacity:0;
+    transform: scale(1);
+  }
+  5%{
+    opacity:1;
+    transform: scale(1);
+  }
+  19.3%{
+    opacity: 1;
+    transform: scale(1.03);
+  }
+  24.3%{opacity: 0;}
+  100%{
+    opacity: 0;
+    scale(1);
+  }
 }
 </style>
